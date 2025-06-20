@@ -1,0 +1,231 @@
+{% extends "layout.html" %} {% load static %} {% block nav_bar %}
+<nav class="navbar">
+  <a class="nav-link" href="{% url 'home' %}">About</a>
+  <a class="nav-link active" href="#">Resume</a>
+  <a class="nav-link" href="{% url 'development' %}">Development</a>
+  <a class="nav-link" href="{% url 'research' %}">Research</a>
+  <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+</nav>
+{% endblock nav_bar %} {% block content %}
+<section class="about">
+  <h1>Resume</h1>
+  <hr class="separator" />
+
+  <section class="education-section">
+    <div class="edu-header">
+      <i class="fas fa-book icon"></i>
+      <h2>Education</h2>
+    </div>
+
+    <div class="edu-timeline">
+      <div class="edu-item">
+        <span class="dot"></span>
+        <div class="content">
+          <h3>GH Raisoni College of Engineering, Nagpur</h3>
+          <p class="years">2022 - 2026</p>
+          <p class="desc">
+            Bachlors in Technology in Computer Science and Engineering
+            Specialization in Artificial Intelligence.
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <span class="dot"></span>
+        <div class="content">
+          <h3>Dharampeth M.P. Deo Memorial Science College, Nagpur</h3>
+          <p class="years">2020 - 2022</p>
+          <p class="desc">General Science With 1st class Passout.</p>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <span class="dot"></span>
+        <div class="content">
+          <h3>Dr. Nandurkar Vidyalaya, Yavatmal</h3>
+          <p class="years">2019 - 2020</p>
+          <p class="desc">
+            Passed SSC (10th Grade) with First Class from Maharashtra State
+            Board.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% comment %} experience section {% endcomment %}
+  <section class="experience-section">
+    <div class="exp-header">
+      <i class="fas fa-book icon"></i>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="exp-timeline">
+      <div class="exp-item">
+        <span class="dot"></span>
+        <div class="content">
+          <h3>C++ Programmer</h3>
+          <p class="years">June 01, 2024 — Juna 01, 2024</p>
+          <p class="desc">
+            Completed one-month training in C++ programming, focusing on
+            object-oriented concepts, data structures, and hands-on coding with
+            real-world problem-solving.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% comment %} progress in the skills {% endcomment %}
+  <section class="skill">
+    <h3 class="h3 skills-title">My Skills</h3>
+
+    <ul class="skills-list content-card">
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">C / C++ - 90%</h5>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 90%"></div>
+        </div>
+      </li>
+
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">Data Structures & Algorithms - 60%</h5>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 60%"></div>
+        </div>
+      </li>
+
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">Object Oriented Programming - 90%</h5>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 90%"></div>
+        </div>
+      </li>
+
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">Python - 80%</h5>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 80%"></div>
+        </div>
+      </li>
+
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">Frontend Development - 90%</h5>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 90%"></div>
+        </div>
+      </li>
+
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">Django - 95%</h5>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 95%"></div>
+        </div>
+      </li>
+
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">PostgreSQL - 75%</h5>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 75%"></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  {% comment %} achievement {% endcomment %}
+  <section class="achievement-section">
+    <div class="section-title">
+      <h2>Achievements</h2>
+    </div>
+
+    <div class="achievement-grid">
+      <div class="achievement-card">
+        <img src="{% static 'images/award.jpeg' %}" alt="Award" />
+        <h3 class="heading">🥇 Gold Medal</h3>
+        <h3 class="desc">Award Of Excellence (2nd Year)</h3>
+      </div>
+
+      <div class="achievement-card">
+        <img
+          src="{% static 'images/award_certificate.jpeg' %}"
+          alt="Certificate"
+        />
+        <h3 class="heading">📰 Certificates</h3>
+        <h3 class="desc">Award of Excellence (1st Year)</h3>
+      </div>
+
+      <div class="achievement-card">
+        <img
+          src="{% static 'images/rakhathon_certi.jpeg' %}"
+          alt="Certificate"
+        />
+        <h3 class="heading">📰 Rackathon Qualifier</h3>
+        <h3 class="desc">Pythanathon - GHRCE Nagpur</h3>
+      </div>
+    </div>
+  </section>
+
+  {% comment %} certification {% endcomment %}
+  <section class="achievement-section">
+    <div class="section-title">
+      <h2>Certification</h2>
+    </div>
+
+    <div class="achievement-grid">
+      <div class="achievement-card">
+        <img src="{% static 'images/sql.png' %}" alt="Award" />
+        <h3 class="heading">PostgreSQL</h3>
+        <p class="desc">
+          Successfully completed RDBMS PostgreSQL Training, including course
+          material provided by the Spoken Tutorial Project, IIT Bombay.
+        </p>
+      </div>
+
+      <div class="achievement-card">
+        <img src="{% static 'images/hackerrank.jpg' %}" alt="Certificate" />
+        <h3 class="heading">Problem Solving</h3>
+        <h3 class="desc">Certified in Problem Solving from HackerRank.</h3>
+      </div>
+    </div>
+  </section>
+
+  {% comment %} resume {% endcomment %}
+
+  <section class="achievement-section">
+    <div class="section-title">
+      <h2>Resume</h2>
+    </div>
+    <div class="resume-preview-section">
+      <div class="resume-image-container">
+        <img
+          src="{% static 'images/resume.jpeg' %}"
+          alt="Resume Preview"
+          class="resume-blur"
+        />
+      </div>
+      <a
+        href="{% static 'images/Kunal_resume.pdf' %}"
+        download
+        class="download-resume-btn"
+      >
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </div>
+  </section>
+</section>
+
+{% endblock content %}

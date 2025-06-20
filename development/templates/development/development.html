@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% load static %} {% block nav_bar %}
+<nav class="navbar">
+  <a class="nav-link" href="{% url 'home' %}">About</a>
+  <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+  <a class="nav-link active" href="#">Development</a>
+  <a class="nav-link" href="{% url 'research' %}">Research</a>
+  <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+</nav>
+{% endblock nav_bar %} {% block content %}
+<section class="about">
+  <h1>Projects</h1>
+  <hr class="separator" />
+
+  <section class="project-section">
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="{% static 'images/portfolio.png' %}" alt="project" />
+        <h3 class="heading">Personal Portfolio</h3>
+        <p class="desc">
+          A responsive and visually appealing personal portfolio website showcasing my skills, projects, education, and experience. Built using HTML, CSS, and JavaScript, it serves as a central hub to highlight my technical background and achievements.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="{% static 'images/trial.jpg' %}" alt="project" />
+        <h3 class="heading">Virtual Trial Room</h3>
+        <p class="desc">
+          Developed an AI-powered virtual trial room with intelligent clothing recommendations enhancing the online shopping experience; work in progress.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</section>
+
+{% endblock content %}

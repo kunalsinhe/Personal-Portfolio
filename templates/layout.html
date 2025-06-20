@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href=" {% static "css/style.css" %}" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="avatar-box">
+          <img src="{% static "/images/personalProfile.jpeg" %}" alt="Kunal
+          Sinhe" class="avatar" />
+        </div>
+        <h2 class="name">Kunal Sinhe</h2>
+        <div class="role-label">Full Stack Developer</div>
+        <hr class="separator" />
+        <div class="contact-card">
+          <div class="contact-item">
+            <span class="icon">📧</span>
+            <div class="contact-info">
+              <span class="label">EMAIL</span>
+              <span class="value">kunaldsinhe296@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📞</span>
+            <div class="contact-info">
+              <span class="label">PHONE</span>
+              <span class="value">+91-9763398931</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📅</span>
+            <div class="contact-info">
+              <span class="label">Date of Birth</span>
+              <span class="value">June 29, 2004</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📍</span>
+            <div class="contact-info">
+              <span class="label">ADDRESS</span>
+              <span class="value">Nagpur, India</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-info">
+              <span class="label">Profiles</span>
+              <span class="value"> <div class="profile-grid">
+              <a
+                href="https://github.com/kunalsinhe"
+                class="profile-card"
+                target="_blank"
+              >
+                <img
+                  style="
+                    width: 32px;
+                    height: 32px;
+                    margin-bottom: 8px;
+                    object-fit: contain;
+                  "
+                  src="{% static 'images/github.png' %}"
+                  alt="GitHub"
+                />
+              </a>
+
+              <a
+                href="https://leetcode.com/u/kunalsinhe/"
+                class="profile-card"
+                target="_blank"
+              >
+                <img
+                  style="
+                    width: 32px;
+                    height: 32px;
+                    margin-bottom: 8px;
+                    object-fit: contain;
+                  "
+                  src="{% static 'images/leetcode.png' %}"
+                  alt="LeetCode"
+                />
+              </a>
+            </div>  </span>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+      <main class="main-content">
+        {% block nav_bar %} 
+        
+        {% endblock nav_bar %} 
+        {% block content %} 
+
+        {% endblock content %}
+      </main>
+    </div>
+  </body>
+</html>

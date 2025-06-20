@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% load static %} {% block nav_bar %}
+<nav class="navbar">
+  <a class="nav-link" href="{% url 'home' %}">About</a>
+  <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+  <a class="nav-link" href="{% url 'development' %}">Development</a>
+  <a class="nav-link" href="{% url 'research' %}">Research</a>
+  <a class="nav-link active" href="#">Contact</a>
+</nav>
+{% endblock nav_bar %} {% block content %}
+<section class="about">
+  <h1>Contact Form</h1>
+  
+  <hr class="separator" />
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeEchqQKDa5Pc1ir9HQfclSBHaWwNAg4UHC8iBRfsP-em6ZqA/viewform?usp=header" 
+          width="640" height="800" frameborder="0" marginheight="0" marginwidth="0" >
+    Loading…
+  </iframe>
+
+</section>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %} 
+{% load static %}
+{% block nav_bar %}
+<nav class="navbar">
+  <a class="nav-link" href="{% url 'home' %}">About</a>
+  <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+  <a class="nav-link" href="{% url 'development' %}">Development</a>
+  <a class="nav-link active" href="#">Research</a>
+  <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+</nav>
+{% endblock nav_bar %} 
+
+{% block content %}
+<section class="about">
+  <h1>Research Papers</h1>
+  <hr class="separator" />
+
+  <section class="research-section">
+    <div class="research-grid">
+      <div class="research-card">
+        <img src="{% static 'images/deaf_glasses.jpg' %}" alt="project" />
+        <h3 class="heading">Deaf Glasses</h3>
+        <p class="desc">
+          A smart deaf glasses developed for seamless communication; work in progress.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</section>
+
+{% endblock content %}
